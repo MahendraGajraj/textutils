@@ -48,11 +48,11 @@ const About = () => {
     return (
         <>
             <div className='container my-3' style={myStyle}>
-                <h1 className='my-3'>😍 𝓚𝓲𝓭𝓼 𝓖𝓮𝓷𝓮𝓻𝓪𝓵 𝓚𝓷𝓸𝔀𝓵𝓮𝓭𝓰𝓮 😍</h1>
+                <h1 className='my-3'>😍 Kids General Knowledge 😍</h1>
                 <div className="d-sm-flex align-items-center justify-content-between w-20" style={{ height: "50vh", marginTop: "25px" }}>
                     <div className="col-md-4 my-3 mx-auto mb-4 mb-sm-0 headline">
                         <span className="text-secondary text-uppercase"><span style={{ color: "green", fontSize: "20px" }}>🆂🅿🅴🅲🅸🅰🅻 🅵🅾🆁</span></span>
-                        <h1 className="display-4 my-4 font-weight-bold color-red"> <span style={{ color: "#9B5DE5", fontSize: "25px" }}>✌𝓓𝓲𝓿𝓲𝓼𝓪,𝓞𝓳𝓪𝓼 𝓪𝓷𝓭 𝓖𝓪𝓳𝓻𝓪𝓳 𝓚𝓲𝓭𝓼✌</span></h1>
+                        <h1 className="display-4 my-4 font-weight-bold color-red"> <span style={{ color: "#9B5DE5", fontSize: "25px" }}>✌Divisa,Ojas and Gajraj Kids✌</span></h1>
                         {/* <Link to="#" className="btn px-5 py-3 text-white mt-3 mt-sm-0" style={{ borderRadius: "30px", backgroundColor: "#9B5DE5" }}></Link>*/}
                     </div>
                     {/* <!-- in mobile remove the clippath -->*/}

@@ -92,7 +92,7 @@ const Calculator = () => {
 
   return (
     <div className={styles.container}>
-      <h1>𝕲𝖆𝖏𝖗𝖆𝖏 𝕾𝖒𝖆𝖗𝖙 𝕮𝖆𝖑𝖈𝖚𝖑𝖆𝖙𝖔𝖗✍</h1>
+      <h1>Gajraj Smart Calculator✍</h1>
       <input value={finalAnswer} type="text" id="calculator-screen" className={styles.calculatorScreen} disabled />
       <div className={styles.buttonGrid}>
         <button onClick={() => { buttonClick('C') }}>C</button>

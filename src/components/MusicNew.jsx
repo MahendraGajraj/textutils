@@ -3,45 +3,45 @@ import React, { useState, useRef, useEffect } from "react";
 //import "./MusicPlayer.css"; // Import your CSS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBackward, faPlay, faPause, faForward } from "@fortawesome/free-solid-svg-icons";
-import styles from"./MusicNew.module.css";
+import styles from "./MusicNew.module.css";
 
 const songs = [
   {
     name: "gajraj-1",
     title: "😎🅷🅰🆃 🅹🅰 🆃🅰🆄 🅿🅰🅲🅷🅷🅴 🅽🅴😎",
-    artist: "𝓥𝓲𝓴𝓪𝓼𝓱 𝓚𝓾𝓶𝓪𝓻",
+    artist: "Vikash Kumar",
   },
   {
     name: "gajraj-2",
     title: "😎🅶🅰🅹🅱🅰🅽😎",
-    artist: "𝓥𝓲𝓼𝓱𝓿𝓪𝓳𝓮𝓮𝓽 𝓒𝓱𝓸𝓾𝓭𝓱𝓪𝓻𝔂",
+    artist: "Vishvajeet choudhary",
   },
   {
     name: "gajraj-3",
-    title: " 🎂𝐵𝒶𝒷𝓎 𝑀𝑒𝓇𝑒 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 𝒫𝑒 𝒢🌸𝓁𝒾 𝒞𝒽𝒶𝓁𝑒𝑔𝒾 ",
-    artist: "𝓚𝓪𝓴𝓪 𝓦𝓡𝓛𝓓,𝓜𝓮𝓰𝓪 𝓚𝓲𝓼𝓱𝓸𝓻𝓮",
+    title: " 🎂Baby Mere Birthday Pe Goli Chalegi",
+    artist: "Kaka WRCD,Mega Kishore",
   },
   {
     name: "gajraj-4",
     title: "♥ Kaala Chashma ♥",
-    artist: "𝗕𝗮𝗱𝘀𝗵𝗮 & 𝗡𝗲𝗵𝗮 𝗞𝗮𝗸𝗸𝗮𝗿",
+    artist: "Badsha & Neha Kakkar",
   },
   {
     name: "gajraj-5",
-    title: "𝕽𝖆𝖆𝖙𝖆𝖆𝖓 𝕷𝖆𝖒𝖇𝖎𝖞𝖆𝖓",
-    artist: "𝕵𝖚𝖇𝖎𝖓 𝕹𝖆𝖚𝖙𝖎𝖞𝖆𝖑 & 𝕬𝖘𝖊𝖊𝖘 𝕶𝖆𝖚𝖗",
+    title: "Raataan Lambiyan",
+    artist: "Jubin Nautinal & Usees Ravi",
   },
   {
     name: "gajraj-6",
-    title: "🐦  🎀  𝒜𝓊𝓇 𝑅𝒶𝓃𝑔 𝒟𝑒  🎀  🐦",
-    artist: "𝗞𝗮𝘃𝗶𝘁𝗮 𝗗𝗮𝗻𝗴𝗶ngi",
+    title: "🐦 🎀Aur Rang De 🎀  🐦",
+    artist: "Kavita Dangi",
   },
   {
     name: "gajraj-7",
-    title: "𝕭𝖆𝖑𝖆𝖒 𝕮𝖍𝖔𝖙𝖔 𝖘𝖔",
-    artist: "𝓢𝓮𝓮𝓶𝓪 𝓜𝓲𝓼𝓱𝓪𝓻𝓪 & 𝓑𝓪𝓭𝓻𝓲 𝓥𝔂𝓪𝓼",
+    title: "Balam Choto So",
+    artist: "Seema Mishra & Badri Vyas",
   },
-   
+
 ];
 
 const MusicNew = () => {
@@ -49,7 +49,7 @@ const MusicNew = () => {
   const [songIndex, setSongIndex] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  
+
   const audioRef = useRef(null);
   const progressRef = useRef(null);
 
@@ -100,11 +100,11 @@ const MusicNew = () => {
 
   return (
     <div className={styles.mainDiv}>
-      <h1 className={styles.gajraj}>🥪 𝓖𝓐𝓙𝓡𝓐𝓙 𝓜𝓤𝓢𝓘𝓒 𝓓𝓐𝓣𝓐 𝓑𝓐𝓝𝓚 🥙</h1>
+      <h1 className={styles.gajraj}>♥ Gajraj Music Data Bank ♥</h1>
       <div className={styles.musicContainer}>
         <h2 id={styles.title}>{songs[songIndex].title}</h2>
         <h3 id={styles.artist}>{songs[songIndex].artist}</h3>
-        <div className={styles.imgContainer}> 
+        <div className={styles.imgContainer}>
           <img src={`/images/${songs[songIndex].name}.jpg`} className={isPlaying ? styles.anime : ""} alt="" />
         </div>
         <audio
@@ -132,14 +132,14 @@ const MusicNew = () => {
             ></div>
           </div>
         </div>
-        
+
         <div className={styles.musicControls}>
           <FontAwesomeIcon icon={faBackward} id="prev" onClick={prevSong} />
           <FontAwesomeIcon
-            icon={isPlaying ? faPause : faPlay} 
-            id="play" 
-            onClick={isPlaying ? pauseMusic : playMusic} 
-          
+            icon={isPlaying ? faPause : faPlay}
+            id="play"
+            onClick={isPlaying ? pauseMusic : playMusic}
+
           />
           <FontAwesomeIcon icon={faForward} id="next" onClick={nextSong} />
         </div>
