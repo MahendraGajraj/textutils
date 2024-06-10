@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="main_div">
+        <h1 class="gajraj">GAJRAJ MUSIC DATA BANK</h1>
+        <div class="music_container">
+            <h2 id="title">Balam Choto so</h2>
+            <h3 id="artist">Seema Mishara & Badri Vyas</h3>
+            <div class="img_container">
+                <img src="images/gajraj-1.jpg" alt="" />
+
+            </div>
+            <audio src="music/gajraj-1.mp3"></audio>
+
+            <!--progress bar-->
+            <div class="progressbar_container" id="progress_container">
+                <div class="progress_duration_meter">
+                    <div id="current_time">0:00</div>
+                    <div id="duration">2:44</div>
+                </div>
+                <div class="progress_div" id="progress_div">
+                    <div class="progress" id="progress">
+
+                    </div>
+                </div>
+                </div>
+            <!--controls/-->
+            <div class="music_controls">
+                <i class="fas fa-backward" id="prev" title="previous"></i>
+                <i class="fas fa-play main_button" id="play" title="play"></i>
+                <i class="fas fa-forward" id="next" title="next"></i>
+            </div>
+            
+            <h2 class="copy_right">@copyright-Mahendra Singh Gajraj</h2>
+        </div>
+       </div>
+    <script>
+        const music = document.querySelector("audio");
+        const img = document.querySelector("img");
+        const play = document.getElementById("play");
+        const artist = document.getElementById("artist");
+        const title = document.getElementById("title");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+
+        let progress = document.getElementById("progress");
+        let total_duration = document.getElementById("duration");
+        let current_Time = document.getElementById("current_time");
+        const progress_div = document.getElementById("progress_div");
+        
+        const songs = [
+            {
+                name: "gajraj-1",
+                title: "Balam Choto so",
+                artist: "Seema Mishara & Badri Vyas",
+            },
+            {
+                name: "gajraj-2",
+                title: "Aur Rang De",
+                artist: "Kavita Dangi",
+            },
+            {
+                name: "gajraj-3",
+                title: "Kaala Chashma",
+                artist: "Badsha & Neha Kakkar",
+            },
+            {
+                name: "gajraj-4",
+                title: "Raataan Lambiyan",
+                artist: "Jubin Nautiyal & Asees Kaur",
+            },
+        ];
+
+        let isPlaying = false;
+        //for play function
+        const playMusic = () => {
+            isPlaying = true;
+            music.play();
+            play.classList.replace("fa-play", "fa-pause");
+            img.classList.add("anime");
+        };
+        // for pause function
+        const pauseMusic = () => {
+            isPlaying = false;
+            music.pause();
+            play.classList.replace("fa-pause", "fa-play");
+            img.classList.remove("anime");
+        };
+
+
+        play.addEventListener("click", () => {
+            /* if(isPlaying){
+                pauseMusic();
+           }else{
+                playMusic();*/
+            isPlaying ? pauseMusic() : playMusic();
+        });
+        // changing the music data
+        const loadSong = (songs) => {
+            title.textContent = songs.title;
+            artist.textContent = songs.artist;
+            music.src = "music/" + songs.name + ".mp3";
+            img.src = "images/" + songs.name + ".jpg"
+        };
+        let songIndex = 0;
+        // loadSong(songs[2]);
+        const nextSong = () => {
+            songIndex = (songIndex + 1) % songs.length;
+            console.log(songIndex)
+            loadSong(songs[songIndex]);
+            playMusic();
+        };
+        const prevSong = () => {
+            songIndex = (songIndex - 1 + songs.length) % songs.length;
+            loadSong(songs[songIndex]);
+            playMusic();
+        };
+        //pogress js work
+        music.addEventListener("timeupdate", (event) => {
+            //consol.log(event)
+            const { currentTime, duration } = event.srcElement;
+            // console.log(currentTime);
+            // consol.log(duration);
+            let progress_time = (currentTime / duration) * 100;
+            progress.style.width = `${progress_time}%`;
+            //music duration update
+            let min_duration = Math.floor(duration / 60);
+            let sec_duration = Math.floor(duration % 60);
+            //consol.log(min_duration);
+            //consol.log(sec_duration);
+            let tot_duration = `${min_duration}:${sec_duration}`;
+            if (duration) {
+                total_duration.textContent = `${tot_duration}`
+            }
+
+            let min_currentTime = Math.floor(currentTime / 60);
+            let sec_currentTime = Math.floor(currentTime % 60);
+            if (sec_currentTime < 10) {
+                sec_currentTime = `0${sec_currentTime}`;
+                let tot_currentTime = `${min_currentTime}:${sec_currentTime}`;
+                current_Time.textContent = `${tot_currentTime}`;
+    
+            };
+        });
+        //current duration update
+        //progress onClick functionality
+        progress_div.addEventListener("click", (event) => {
+            //console.log(event);
+            const { duration } = music;
+            let move_progress = (event.offsetX / event.srcElement.clientWidth) * duration;
+            //consol.log(move_progress);
+            //consol.log(duration);
+            music.currentTime = move_progress;
+
+        });
+        //if music end call next song func
+        music.addEventListener("ended", nextSong);
+        next.addEventListener("click", nextSong);
+        prev.addEventListener("click", prevSong);
+
+    </script>
+
+    
+</body>
+
+</html>
