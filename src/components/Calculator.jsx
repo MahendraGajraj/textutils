@@ -126,7 +126,7 @@ const Calculator = () => {
         <button className={styles.big} onClick={() => { buttonClick('∛') }}>∛</button>
         <button className={styles.big} onClick={() => { buttonClick('x\u02b8') }}>xy</button>
         <button className={styles.big} onClick={() => { buttonClick('x\u00B3') }}>x³</button>
-        <button className={styles.big} onCick={() => { buttonClick('x\u00B2') }}>x²</button>
+        <button className={styles.big} onClick={() => { buttonClick('x\u00B2') }}>x²</button>
         <button className={styles.big} onClick={() => { buttonClick('ln') }}>ln</button>
         <button className={styles.big} onClick={() => { buttonClick('deg') }}>deg</button>
         <button className={styles.big} onClick={() => { buttonClick('rad') }}>rad</button>
