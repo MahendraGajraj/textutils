@@ -8,7 +8,7 @@ import styles from "./MusicNew.module.css";
 const songs = [
   {
     name: "gajraj-1",
-    title: "😎🅷🅰🆃 🅹🅰 🆃🅰🆄 🅿🅰🅲🅷🅷🅴 🅽🅴😎",
+    title: "😎🅷🅰🆃 🅹🅰 🆃🅰🆄 🅿🅰🅲🅷🅷🅴 🅽🅴",
     artist: "Vikash Kumar",
   },
   {

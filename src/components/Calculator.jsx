@@ -95,47 +95,48 @@ const Calculator = () => {
       <h1>Gajraj Smart Calculator✍</h1>
       <input value={finalAnswer} type="text" id="calculator-screen" className={styles.calculatorScreen} disabled />
       <div className={styles.buttonGrid}>
-        <button onClick={() => { buttonClick('C') }}>C</button>
-        <button onClick={() => { buttonClick('CE') }}>CE</button>
-        <button onClick={() => { buttonClick('√') }}>√</button>
-        <button onClick={() => { buttonClick('+') }}>+</button>
-        <button onClick={() => { buttonClick('1') }}>1</button>
-        <button onClick={() => { buttonClick('2') }}>2</button>
-        <button onClick={() => { buttonClick('3') }}>3</button>
-        <button onClick={() => { buttonClick('-') }}>-</button>
-        <button onClick={() => { buttonClick('4') }}>4</button>
-        <button onClick={() => { buttonClick('5') }}>5</button>
-        <button onClick={() => { buttonClick('6') }}>6</button>
-        <button onClick={() => { buttonClick('*') }}>*</button>
-        <button onClick={() => { buttonClick('7') }}>7</button>
-        <button onClick={() => { buttonClick('8') }}>8</button>
-        <button onClick={() => { buttonClick('9') }}>9</button>
-        <button onClick={() => { buttonClick('/') }}>÷</button>
-        <button onClick={() => { buttonClick('0') }}>0</button>
-        <button onClick={() => { buttonClick('.') }}>.</button>
-        <button onClick={() => { buttonClick('%') }}>%</button>
-        <button onClick={() => { buttonClick('=') }}>=</button>
-        <button onClick={() => { buttonClick('π') }}>π</button>
-        <button onClick={() => { buttonClick('2π') }}>2π</button>
-        <button onClick={() => { buttonClick('cosθ') }}>cosθ</button>
-        <button onClick={() => { buttonClick('tanθ') }}>tanθ</button>
-        <button onClick={() => { buttonClick('sinθ') }}>sinθ</button>
-        <button onClick={() => { buttonClick('cosh') }}>cosh</button>
-        <button onClick={() => { buttonClick('tanh') }}>tanh</button>
-        <button onClick={() => { buttonClick('sinh') }}>sinh</button>
-        <button onClick={() => { buttonClick('∛') }}>∛</button>
-        <button onClick={() => { buttonClick('x\u02b8') }}>xy</button>
-        <button onClick={() => { buttonClick('x\u00B3') }}>x³</button>
-        <button onClick={() => { buttonClick('x\u00B2') }}>x²</button>
-        <button onClick={() => { buttonClick('ln') }}>ln</button>
-        <button onClick={() => { buttonClick('deg') }}>deg</button>
-        <button onClick={() => { buttonClick('rad') }}>rad</button>
-        <button onClick={() => { buttonClick('e') }}>e</button>
-        <button onClick={() => { buttonClick('log10') }}>log10</button>
-        <button onClick={() => { buttonClick('(') }}>(</button>
-        <button onClick={() => { buttonClick(')') }}>)</button>
-        <button onClick={() => { buttonClick('x!') }}>x!</button>
+        <button className={styles.big} onClick={() => { buttonClick('C') }}>C</button>
+        <button className={styles.big} onClick={() => { buttonClick('CE') }}>CE</button>
+        <button className={styles.big} onClick={() => { buttonClick('√') }}>√</button>
+        <button className={styles.big} onClick={() => { buttonClick('+') }}>+</button>
+        <button className={styles.big} onClick={() => { buttonClick('1') }}>1</button>
+        <button className={styles.big} onClick={() => { buttonClick('2') }}>2</button>
+        <button className={styles.big} onClick={() => { buttonClick('3') }}>3</button>
+        <button className={styles.big} onClick={() => { buttonClick('-') }}>-</button>
+        <button className={styles.big} onClick={() => { buttonClick('4') }}>4</button>
+        <button className={styles.big} onClick={() => { buttonClick('5') }}>5</button>
+        <button className={styles.big} onClick={() => { buttonClick('6') }}>6</button>
+        <button className={styles.big} onClick={() => { buttonClick('*') }}>*</button>
+        <button className={styles.big} onClick={() => { buttonClick('7') }}>7</button>
+        <button className={styles.big} onClick={() => { buttonClick('8') }}>8</button>
+        <button className={styles.big} onClick={() => { buttonClick('9') }}>9</button>
+        <button className={styles.big} onClick={() => { buttonClick('/') }}>÷</button>
+        <button className={styles.big} onClick={() => { buttonClick('0') }}>0</button>
+        <button className={styles.big} onClick={() => { buttonClick('.') }}>.</button>
+        <button className={styles.big} onClick={() => { buttonClick('%') }}>%</button>
+        <button className={styles.big} onClick={() => { buttonClick('=') }}>=</button>
+        <button className={styles.big} onClick={() => { buttonClick('π') }}>π</button>
+        <button className={styles.big} onClick={() => { buttonClick('2π') }}>2π</button>
+        <button className={styles.big} onClick={() => { buttonClick('cosθ') }}>cosθ</button>
+        <button className={styles.big} onClick={() => { buttonClick('tanθ') }}>tanθ</button>
+        <button className={styles.big} onClick={() => { buttonClick('sinθ') }}>sinθ</button>
+        <button className={styles.big} onClick={() => { buttonClick('cosh') }}>cosh</button>
+        <button className={styles.big} onClick={() => { buttonClick('tanh') }}>tanh</button>
+        <button className={styles.big} onClick={() => { buttonClick('sinh') }}>sinh</button>
+        <button className={styles.big} onClick={() => { buttonClick('∛') }}>∛</button>
+        <button className={styles.big} onClick={() => { buttonClick('x\u02b8') }}>xy</button>
+        <button className={styles.big} onClick={() => { buttonClick('x\u00B3') }}>x³</button>
+        <button className={styles.big} onCick={() => { buttonClick('x\u00B2') }}>x²</button>
+        <button className={styles.big} onClick={() => { buttonClick('ln') }}>ln</button>
+        <button className={styles.big} onClick={() => { buttonClick('deg') }}>deg</button>
+        <button className={styles.big} onClick={() => { buttonClick('rad') }}>rad</button>
+        <button className={styles.big} onClick={() => { buttonClick('e') }}>e</button>
+        <button className={styles.big} onClick={() => { buttonClick('log10') }}>log10</button>
+        <button className={styles.big} onClick={() => { buttonClick('(') }}>(</button>
+        <button className={styles.big} onClick={() => { buttonClick(')') }}>)</button>
+        <button className={styles.big} onClick={() => { buttonClick('x!') }}>x!</button>
       </div>
+      <h2 className={styles.copyRight}>@copyright-Mahendra Singh Gajraj</h2>
     </div>
 
   )

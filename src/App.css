@@ -1,7 +1,13 @@
 #root {
-  max-width: 1280px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  @media (min-width:320px) {
+    display: flex;
+    width: 1000px;
+    height: 80px;
+    font-size: 10px;
+  }
 }
 .lion img {
   width: 150px;
@@ -11,6 +17,7 @@
 .lion {
   display: inline-flex;
   align-items: center;
+  font-size: 50px;
 }
 .lion h2 {
   margin-left: 50px;
@@ -195,5 +202,6 @@
 }
 .watermelon h2 {
   margin-left: 50px;
-  
 }
+  
+  

@@ -12,16 +12,19 @@ html {
     font-family: "jost", sans-serif;
 }
 
-.gajraj {
-    color:red;list-style-type: square;
-}
-
 .mainDiv {
     width: 100vw;
     height: 100vh;
     background-color: #f6f6f6;
     display: grid;
     place-items: center;
+    justify-content: center;
+    
+}
+.gajraj {
+    color:red;list-style-type: square;
+    justify-items: center;  
+    justify-content: center;
 }
 .copyRight{
     color:green;
@@ -38,7 +41,7 @@ html {
     text-align: center;
 }
 
-.musicContainer#title {
+#title {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     word-spacing: 0.5rem;
@@ -49,7 +52,7 @@ html {
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
-.musicContainer#artist {
+#artist {
     color: #cccaca;
     text-transform: capitalize;
     letter-spacing: 0.1rem;
@@ -173,4 +176,49 @@ img {
     display: flex;
     justify-content: space-between;
     font-size: 1.2rem;
+}
+.mainDiv{
+
+    @media (min-width:320px) {
+        display: grid;
+        width: 70vw;
+        height: 70vh;
+        font-size: 40px;
+         
+      }
+}
+.musicContainer {
+      
+    @media (min-width:320px) {
+        width:60rem;
+        height: 100rem;
+        background-color: #f6f6f6;
+        border-radius: 2rem;
+        box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+        padding: 3rem;
+        text-align: center;
+        font-size: 40px;    
+      }
+}
+.imgContainer {
+       @media (min-width:320px) {
+       width:50rem;
+       height: 50rem; 
+       margin:auto
+      }
+}
+.musicContainer#title {
+    @media (min-width:320px) {
+        font-size: 10rem;
+       }
+    
+}
+
+#artist{
+    @media (min-width:320px){
+     font-size: 4rem;
+     margin-bottom: 4rem;
+     font-weight: 700;
+       }
+    
 }
